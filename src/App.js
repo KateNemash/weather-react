@@ -8,16 +8,16 @@ import "./styles.css";
 
 export default function App() {
   return (
-    <div class="container weather-app">
-      <div class="card">
-        <div class="card-body">
+    <div className="container weather-app">
+      <div className="card">
+        <div className="card-body">
           <header>
-            <div class="row">
-              <div class="col">
+            <div className="row">
+              <div className="col">
                 <h1>Barcelona</h1>
                 <h2>Sat, 09.07.2022</h2>
               </div>
-              <div class="col">
+              <div className="col">
                 <h3>13:07</h3>
               </div>
             </div>

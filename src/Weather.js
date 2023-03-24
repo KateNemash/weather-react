@@ -4,15 +4,15 @@ import "./styles.css";
 
 export default function Weather() {
   return (
-    <div class="row center">
-      <div class="col temperature">
-        <span class="changing-temp"></span>
-        <span class="temperature-units">°C</span>
+    <div className="row center">
+      <div className="col temperature">
+        <span className="changing-temp"></span>
+        <span className="temperature-units">°C</span>
       </div>
-      <div class="col">
+      <div className="col">
         <img src="" alt="" class="sun-icon" id="icon" />
       </div>
-      <div class="col details">
+      <div className="col details">
         <ul>
           <li>
             Feels like: <span id="feels-like"></span>°C
