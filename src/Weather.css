@@ -1,7 +1,3 @@
-.Weather li {
-  list-style: none;
-}
-
 .Weather .center {
   text-align: center;
 }
@@ -14,6 +10,11 @@
 .Weather .temperature-units {
   position: relative;
   top: -34px;
+}
+
+.Weather li {
+  list-style: none;
+  text-align: left;
 }
 
 .Weather .details {

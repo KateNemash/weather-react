@@ -12,10 +12,13 @@ export default function Search(props) {
   function updateWeather(response) {
     setWeather({
       loaded: true,
+      city: response.data.name,
+      date: new Date(response.data.dt * 1000),
       temperature: response.data.main.temp,
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
+      feels: response.data.main.feels_like,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
   }
@@ -40,7 +43,7 @@ export default function Search(props) {
             type="search"
             placeholder="Enter a city"
             autoFocus="on"
-            autocomplete="off"
+            autoComplete="off"
             id="search-input"
             className="search-input"
             onChange={updateCity}
@@ -59,7 +62,7 @@ export default function Search(props) {
           <input
             type="search"
             placeholder="Enter a city"
-            autocomplete="off"
+            autoComplete="off"
             id="search-input"
             className="search-input"
             onChange={updateCity}
