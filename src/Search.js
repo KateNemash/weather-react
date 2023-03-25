@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Header from "./Header";
+import Weather from "./Weather";
 
 import "./Search.css";
 
@@ -32,6 +34,7 @@ export default function Search(props) {
   if (weather.loaded) {
     return (
       <div>
+        <Header data={weather} />
         <form className="search" id="search-form" onSubmit={handleSubmit}>
           <input
             type="search"
@@ -45,15 +48,7 @@ export default function Search(props) {
           <input type="submit" value="Search" />
           <input type="submit" value="Current" id="current-location" />
         </form>
-        <ul>
-          <li>Temperature: {Math.round(weather.temperature)}°C</li>
-          <li>Description: {weather.description}</li>
-          <li>Humidity: {weather.humidity}%</li>
-          <li>Wind: {weather.wind}km/h</li>
-          <li>
-            <img src={weather.icon} alt={weather.description} />
-          </li>
-        </ul>
+        <Weather data={weather} />
       </div>
     );
   } else {
@@ -62,7 +57,6 @@ export default function Search(props) {
         <input
           type="search"
           placeholder="Enter a city"
-          autoFocus="on"
           autocomplete="off"
           id="search-input"
           className="search-input"
