@@ -14,7 +14,7 @@ export default function App() {
       <div className="card">
         <div className="card-body">
           <Header />
-          <Search />
+          <Search defaultCity="Barcelona" />
           <Weather />
           <Forecast />
         </div>
