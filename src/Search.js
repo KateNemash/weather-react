@@ -53,18 +53,21 @@ export default function Search(props) {
     );
   } else {
     return (
-      <form className="search" id="search-form" onSubmit={handleSubmit}>
-        <input
-          type="search"
-          placeholder="Enter a city"
-          autocomplete="off"
-          id="search-input"
-          className="search-input"
-          onChange={updateCity}
-        />
-        <input type="submit" value="Search" />
-        <input type="submit" value="Current" id="current-location" />
-      </form>
+      <div>
+        <Header data={weather} />
+        <form className="search" id="search-form" onSubmit={handleSubmit}>
+          <input
+            type="search"
+            placeholder="Enter a city"
+            autocomplete="off"
+            id="search-input"
+            className="search-input"
+            onChange={updateCity}
+          />
+          <input type="submit" value="Search" />
+          <input type="submit" value="Current" id="current-location" />
+        </form>
+      </div>
     );
   }
 }
