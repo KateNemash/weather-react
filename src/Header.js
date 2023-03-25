@@ -1,10 +1,10 @@
 import React from "react";
 
-import "./styles.css";
+import "./Header.css";
 
-export default function Footer() {
+export default function Header() {
   return (
-    <header>
+    <header className="Header">
       <div className="row">
         <div className="col">
           <h1>Barcelona</h1>

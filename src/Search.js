@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./styles.css";
+import "./Search.css";
 
 export default function Search() {
   return (
@@ -8,7 +8,7 @@ export default function Search() {
       <input
         type="text"
         placeholder="Enter a city"
-        autofocus="on"
+        autoFocus="on"
         autocomplete="off"
         id="search-input"
         className="search-input"

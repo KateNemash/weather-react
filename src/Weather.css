@@ -1,0 +1,21 @@
+.Weather li {
+  list-style: none;
+}
+
+.Weather .center {
+  text-align: center;
+}
+
+.Weather .changing-temp {
+  font-size: 64px;
+  font-weight: 600;
+}
+
+.Weather .temperature-units {
+  position: relative;
+  top: -34px;
+}
+
+.Weather .details {
+  padding-top: 15px;
+}

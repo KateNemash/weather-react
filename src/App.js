@@ -6,7 +6,7 @@ import Weather from "./Weather";
 import Forecast from "./Forecast";
 import Footer from "./Footer";
 
-import "./styles.css";
+import "./App.css";
 
 export default function App() {
   return (
@@ -17,9 +17,9 @@ export default function App() {
           <Search />
           <Weather />
           <Forecast />
-          <Footer />
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

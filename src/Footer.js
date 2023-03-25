@@ -1,17 +1,17 @@
 import React from "react";
 
-import "./styles.css";
+import "./Footer.css";
 
 export default function Footer() {
   return (
-    <footer>
+    <footer className="footer">
       <a
         href="https://github.com/KateNemash/weather-react.git"
         target="_blank"
         rel="noreferrer"
       >
         Open-source code
-      </a>
+      </a>{" "}
       by Kate Nemash
     </footer>
   );

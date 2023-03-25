@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./styles.css";
+import "./Forecast.css";
 
 export default function Forecast() {
   return <div className="forecast-days" id="forecast"></div>;
