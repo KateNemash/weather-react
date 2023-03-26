@@ -3,8 +3,10 @@ import React from "react";
 import "./Header.css";
 
 export default function Header(props) {
+  let date = new Date(props.data.datastamp * 1000);
+
   let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
-  let day = days[props.data.date.getDay()];
+  let day = days[date.getDay()];
 
   let months = [
     "01",
@@ -20,27 +22,25 @@ export default function Header(props) {
     "11",
     "12",
   ];
-  let month = months[props.data.date.getMonth()];
+  let month = months[date.getMonth()];
 
-  let hours = props.data.date.getHours();
+  let hours = date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
   }
 
-  let minutes = props.data.date.getMinutes();
+  let minutes = date.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
 
-  console.log(props.data);
   return (
     <header className="Header">
       <div className="row">
         <div className="col">
           <h1>{props.data.city}</h1>
           <h2>
-            {day}, {props.data.date.getDate()}.{month}.
-            {props.data.date.getFullYear()}
+            {day}, {date.getDate()}.{month}.{date.getFullYear()}
           </h2>
         </div>
         <div className="col">
