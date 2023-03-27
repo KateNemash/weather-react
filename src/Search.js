@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import Header from "./Header";
 import Weather from "./Weather";
+import DailyForecast from "./DailyForecast";
 
 import "./Search.css";
 
@@ -14,6 +15,7 @@ export default function Search(props) {
       loaded: true,
       city: response.data.name,
       datastamp: response.data.dt,
+      coordinates: response.data.coord,
       temperature: response.data.main.temp,
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
@@ -56,6 +58,7 @@ export default function Search(props) {
           <input type="submit" value="Current" id="current-location" />
         </form>
         <Weather data={weather} />
+        <DailyForecast coordinates={weather.coordinates} />
       </div>
     );
   } else {
