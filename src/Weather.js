@@ -1,5 +1,4 @@
 import React from "react";
-import UnitConvertion from "./UnitConvertion";
 
 import "./Weather.css";
 
@@ -7,7 +6,13 @@ export default function Weather(props) {
   return (
     <div className="Weather">
       <div className="row center">
-        <UnitConvertion celsius={props.data.temperature} />
+        <div className="col temperature">
+          <span className="changing-temp">
+            {Math.round(props.data.temperature)}
+          </span>
+          <span className="temperature-units">°C</span>
+        </div>
+
         <div className="col">
           <img
             src={props.data.icon}
