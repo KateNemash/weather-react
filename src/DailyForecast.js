@@ -27,6 +27,7 @@ export default function DailyForecast(props) {
 
     axios.get(apiUrl).then(updateForecast);
   }
+
   if (loaded) {
     return (
       <div className="DailyForecast">
